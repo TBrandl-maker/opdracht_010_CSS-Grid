@@ -1,0 +1,79 @@
+body {
+   height:100vh; 
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    gap: 5px 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr); 
+    grid-template-areas: 
+    "h" 
+    "m"
+    "c" 
+    "f";
+}
+
+.header {
+    grid-area: h; 
+    background-color: blue;
+    color: white; 
+}
+
+.menu{
+    grid-area: m; 
+    background-color: green;
+    color: white;
+    
+}
+
+.content {
+    grid-area: c; 
+    background-color: purple;
+    color: white;
+    
+}
+
+.footer {
+    grid-area: f; 
+    background-color: darkblue;
+    color: white;
+    
+}
+
+
+
+/* Media Queries */ 
+@media screen and (max-width: 320px) {}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr); 
+        grid-template-areas: 
+        "h m m" 
+        "h m m"
+        "h m m"
+        "h m m" 
+        "h m m"
+        "h c c" 
+        "h c c"
+        "h f f";
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container {
+        grid-template-columns: 200px auto 200px;
+        grid-template-areas: 
+        "h m c" 
+        "h m c"
+        "h m c"
+        "h m c" 
+        "h m c"
+        "h m c" 
+        "h m c"
+        "h f c";
+    }
+}
